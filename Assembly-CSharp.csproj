@@ -54,6 +54,7 @@
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\script\cambiocamara.cs" />
+     <Compile Include="Assets\script\cofretesoro.cs" />
      <Compile Include="Assets\script\ControladorDeArmas.cs" />
      <Compile Include="Assets\script\GeneredaroDeEnemigos.cs" />
      <Compile Include="Assets\script\LogicaArma.cs" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets\script\PantallaVidas.cs" />
      <Compile Include="Assets\script\Puntuacion.cs" />
      <Compile Include="Assets\script\Vida.cs" />
+     <Compile Include="Assets\script\VolverAJugar.cs" />
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Carmen Rendón/Desktop/JUEGO ZOMBIE CARMEN/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

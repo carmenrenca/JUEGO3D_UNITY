@@ -31,8 +31,9 @@ public class LogicaJugador : MonoBehaviour
             AudioListener.volume=0f;
      
         Vida0=true;
+                 Invoke("ReiniciarJuego", 2f);
+
                 animadorPerder.SetTrigger("Mostrar"); 
-         Invoke("ReiniciarJuego", 2f);
   
         }
     }

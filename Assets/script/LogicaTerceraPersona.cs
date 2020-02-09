@@ -7,33 +7,53 @@ public class LogicaTerceraPersona : MonoBehaviour
 
   public Transform puntoDeDisparo;
      public float daño= 20f;
-    public float velocidadMovimiento= 5.0f;
-    public float valocidadRotacion= 200.0f;
-    private Animator anim;
-    public float x,y;
-
+    private Transform myTransform;
+    public Animator anim;
+    
+  public float spped;
     // Start is called before the first frame update
     void Start()
     {
         anim=GetComponent<Animator>();
+        myTransform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        x=Input.GetAxis("Horizontal");
+   /*     x=Input.GetAxis("Horizontal");
         y=Input.GetAxis("Vertical");
 
       transform.Rotate(0,x*Time.deltaTime*valocidadRotacion,0);
       transform.Translate(0,0,y*Time.deltaTime*velocidadMovimiento);
       anim.SetFloat("VelX",x);
       anim.SetFloat("VelY",y);
+**/
 
-      if(Input.GetKey("a")){
-          ReproducirAnimacionDisparo();
+if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.LeftShift) )
+{
+    anim.SetBool("walk", true);
+myTransform.Translate(Vector3.forward * spped * Time.deltaTime);
+}else{
+       anim.SetBool("walk", false);
+}
+
+      if(Input.GetKey(KeyCode.Space)){
+       anim.SetBool("attack", true);
                       
 
 
+      }else{
+            anim.SetBool("attack", false);
+      }
+
+         if(Input.GetKey(KeyCode.S)){
+       anim.SetBool("runback", true);
+                      
+
+
+      }else{
+            anim.SetBool("runback", false);
       }
     }
 

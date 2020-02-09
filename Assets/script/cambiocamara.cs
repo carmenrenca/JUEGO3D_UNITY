@@ -26,12 +26,16 @@ public class cambiocamara : MonoBehaviour
             terceraCamera.enabled=false;
             jugador1.SetActive(true);
                 jugador3.SetActive(false);
+                jugador1.transform.position= jugador3.transform.position;
         }
             if(Input.GetButtonDown("2")){
             firstPersonCamera.enabled=false;
             terceraCamera.enabled=true;
               jugador1.SetActive(false);
               jugador3.SetActive(true);
+                jugador3.transform.position= jugador1.transform.position;
         }
+          jugador1.transform.position= jugador3.transform.position;
+           jugador3.transform.position= jugador1.transform.position;
     }
 }

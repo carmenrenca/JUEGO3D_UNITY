@@ -7,7 +7,7 @@ public class LogicaEnemigo : MonoBehaviour
     public GameObject target;
     private NavMeshAgent agente;
     private Vida vida;
-    private Animator animator;
+    public Animator animator;
     private Collider collider;
     private Vida vidajugador;
     private LogicaJugador logicaJugador;
@@ -27,7 +27,8 @@ public class LogicaEnemigo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target= GameObject.FindWithTag("Jugador");
+        
+        target= GameObject.Find("");
         vidajugador= target.GetComponent<Vida>();
         if(vidajugador== null){
             throw new System.Exception("El objeto Jugador no tiene componente Vida");

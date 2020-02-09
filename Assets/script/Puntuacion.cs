@@ -18,7 +18,7 @@ public class Puntuacion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        texto.text="Puntuacion"+puntuacion.valor;
+        texto.text="Puntuacion "+puntuacion.valor;
         
     }
 }
